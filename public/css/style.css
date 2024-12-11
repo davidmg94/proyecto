@@ -1,0 +1,54 @@
+/* Establecer el estilo de la página para asegurarse de que el footer quede abajo */
+html, body {
+   height: 100%; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+   margin: 0; /* Elimina los márgenes por defecto */
+}
+
+body {
+   display: flex;
+   flex-direction: column; /* Alinea los elementos en columna */
+}
+
+.container {
+   flex: 1; /* Hace que el contenido ocupe todo el espacio disponible */
+}
+
+footer {
+   background-color: #f8f9fa; /* Color de fondo del pie de página */
+   padding: 20px;
+   text-align: center;
+   position: relative;
+   width: 100%;
+}
+
+/* Estilos para los encabezados de la tabla */
+th {
+   cursor: pointer;
+   position: relative;
+}
+
+th::after {
+   content: "";
+   position: absolute;
+   right: 8px;
+   top: 50%;
+   transform: translateY(-50%);
+   border: 6px solid transparent;
+   display: none;
+}
+
+th.ascendente::after {
+   display: inline-block;
+   border-bottom-color: black; /* Triángulo hacia abajo */
+}
+
+th.descendente::after {
+   display: inline-block;
+   border-top-color: black; /* Triángulo hacia arriba */
+}
+
+span {
+   width: 20px;
+   padding: 5px;
+   border-radius: 20%;
+}
